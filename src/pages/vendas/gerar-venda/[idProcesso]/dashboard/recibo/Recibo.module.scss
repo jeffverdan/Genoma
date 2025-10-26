@@ -1,0 +1,160 @@
+@import '../../../../../../styles/sass/colors.scss', '../../../../../../styles/sass/fonts.scss';
+
+.container{
+    height: 100vh;
+    background: #F6F8F9;
+}
+
+.containerRecibo{
+    width: 100%;
+    background: #F6F8F9;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content{
+    max-width: 1160px;
+    width: 100%;
+    margin: 40px auto 60px;
+    border-radius: 10px;
+    border: 1px solid var(--neutral-200, #E0E7EB);
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08), 0px 0px 6px 0px rgba(0, 0, 0, 0.02);
+    background: #FFF;
+    height: auto;
+}
+
+.page{
+    padding: 80px 118px;
+
+    .logo{
+        margin-bottom: 35px;
+    }
+
+    .title{
+        color: var(--neutral-600, #464F53);
+        text-align: center;
+        font-family: Roboto;
+        font-size: 1.25rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px;
+        margin-bottom: 25px;
+    }
+
+    p{
+        margin-bottom: 20px;
+        line-height: 1.5rem;
+    }
+
+    .destaque{
+        font-family: Roboto;
+        font-weight: 700;
+    }
+
+    .termoCiencia{
+        border: 1px solid #E0E7EB;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 40px;
+        text-align: center;
+    }
+
+    .dataContrato{
+        text-align: center;
+    }
+
+    .assinaturas{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        p{
+            margin-bottom: 5px;
+            text-align: center;
+        }
+    }
+
+    .testemunhasObservacao{
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+
+        .testemunhas{
+            .testemunha{
+                margin-top: 15px; 
+
+                p{
+                    margin-bottom: 5px;
+                }
+            }
+        }
+
+        .observacao{
+            border: 1px solid #D8DAE5;
+            width: 230px;
+            width: 325px;
+            padding: 20px 30px;
+
+            p{
+                margin-bottom: 0;
+            }
+
+            span{
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+.tira{
+    height: 25px;
+    background-image: url(../../../../../../images/tira-footer-recibo.svg);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-repeat: repeat-y;
+}
+
+@media (max-width: 800px) {
+    .content{
+        margin-top: 50px;
+    }
+
+    .logo{
+        display: flex;
+        justify-content: center;
+    }
+
+    .page{
+        padding: 20px;
+        display: block;
+
+        .title{
+            font-size: 1rem;
+            line-height: 1.3rem;
+        }
+
+        p{
+            line-height: 1.7rem;
+        }
+
+        .termoCiencia{
+            margin: 30px 0;
+        }
+
+        .assinaturas{
+            display: block
+        }
+
+        .testemunhasObservacao{
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+
+            .observacao{
+                margin: 0 0 25px 0;
+            }
+        }
+    }
+}

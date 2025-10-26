@@ -1,0 +1,117 @@
+.rowNucleo{
+    // justify-content: space-between;
+}
+
+.content{
+    color:#74848B;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.rowTitle{
+    color: #464F53;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    margin-top: 25px;
+}
+
+.rowService{
+   display: flex;
+   gap: 10px;
+   flex-wrap: wrap;
+}
+
+.collumn{
+    flex-direction: column;
+}
+
+.onusComarca{
+    flex-direction: column;
+
+    span{
+        color: #74848B;
+    }
+}
+
+.collumn{
+    display: flex;
+    flex-direction: column;
+    line-height: 25px;
+}
+
+.btnDoc{
+    display: flex;
+    justify-content: flex-end;
+    svg{
+        color: #01988C;
+
+        path{
+            color: #01988C;
+            fill: #01988C
+        }
+    }
+}
+
+.doc{
+    // display: flex;
+    // flex-direction: column;
+    // gap: 10px;
+
+    display: grid;
+    //grid-template-columns: 1fr 100px 100px 1fr;
+    gap: 10px;
+
+    .docHeader, .docRowLine {
+        /*display: contents; /* Allows children to be grid items without changing their display style */
+        display: grid;
+        grid-template-columns: 1fr 1fr 200px;
+        gap: 10px;
+    }
+
+    .docRowLine{
+        border-bottom: 2px solid #E0E7EB;
+        margin: 15px 0;
+        padding: 0 0 15px 0;
+    }
+    .docRowLine:last-child{
+        border: none;
+    }
+    // .docRowLine:hover {
+    //     background-color: #ccc ; /* Changes the background color on hover */
+    // }
+
+    .docRow a:nth-child(4) {
+        align-content: center;
+    }
+
+    .docHeader{
+        // display: grid;
+        // grid-template-columns: 1fr 1fr;
+        // gap: 10px;
+        // column-gap: 40px;
+
+        p{
+            color: #464F53;
+        }
+
+        .docName{
+            color: #74848B;
+            font-family: Roboto;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 22px;
+            gap: 10px;
+        }
+    }
+
+    .rowSpacing{
+        margin: 5px 0 5px 0;
+    }
+}

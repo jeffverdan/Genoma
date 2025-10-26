@@ -1,0 +1,45 @@
+export interface MyImovel {
+    usuario_id?: string,
+    processo_id?: string,
+    bairro_comercial: string;
+    cep: string;
+    codigo_proprietario: string;
+    complemento: string;
+    cpf_cnpj_proprietario: string;
+    emails_proprietario: string;
+    endereco_completo: string;
+    endereco_proprietario: string;
+    informacao?: {
+        escritura: string
+        matricula: string
+        inscricaoMunicipal: string
+        recibo?: string
+        prazo?: string
+        tipo_escritura?: string
+    }
+    inscricao_municipal: string;
+    municipio: string;
+    nome_logradouro: string;
+    nome_opcionista1?: string;
+    nome_opcionista2?: string;
+    nome_opcionista3?: string;
+    nome_opcionista4?: string;
+    nome_proprietario: string;
+    numero: string;
+    opcionista1?: string;
+    opcionista2?: string;
+    opcionista3?: string;
+    opcionista4?: string;
+    percentual_opcao1?: string;
+    percentual_opcao2?: string;
+    percentual_opcao3?: string;
+    percentual_opcao4?: string;
+    qtde_vagas: string;
+    referencia: string;
+    telefones_proprietario: string;
+    tipo_imovel: string;
+    tipo_logradouro: string;
+    tipo_opcao: string;
+    unidade: string;
+    valor_venda: string;
+}

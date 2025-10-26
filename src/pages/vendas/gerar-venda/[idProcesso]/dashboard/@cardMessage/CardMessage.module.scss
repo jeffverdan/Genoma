@@ -1,0 +1,69 @@
+.cardMessage{
+    width: 100%;
+    max-width: 1160px;
+    margin: 50px auto 150px;
+
+    .content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 10px;
+        border: 1px solid var(--neutral-200, #E0E7EB);
+        background: #FFF;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08), 0px 0px 6px 0px rgba(0, 0, 0, 0.02);
+        padding: 15px 35px 15px 15px;
+
+        .info{
+            display: flex;
+            align-items: center;
+            .image{
+                width: 90px;
+                height: 100px;
+            }
+         
+            p{
+                margin-left: 25px;
+                width: 100%;
+                max-width: 455px;
+                font-size: 1.25rem;
+                font-weight: 400;
+                color: #5D696F;
+            }
+        }
+    }
+}
+
+@media (max-width: 980px) {
+    .cardMessage{
+        margin-bottom: 120px;
+        padding: 20px;
+
+        .content{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+
+            div:nth-child(2){
+                margin-bottom: 25px;
+            }
+
+            .info{
+                margin-bottom: 25px;
+                padding: 15px;
+
+                p{
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .cardMessage{
+        margin-top: 25px;
+        margin-bottom: 50px;
+    }
+}

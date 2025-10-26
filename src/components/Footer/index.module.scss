@@ -1,0 +1,121 @@
+@import "../../styles/sass/colors.scss", "../../styles/sass/fonts.scss";
+
+/*Desktop*/
+.footerPage{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: $white;
+    position: absolute;
+    bottom: 0;
+    border: 1px solid #E0E7EB;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.02), 0px 2px 4px rgba(0, 0, 0, 0.08);
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    padding: 14px 30px;
+
+    .content{
+        transform: inherit;
+        width: 100%;
+        max-width: 1160px;
+        display: flex;
+        justify-content: space-between;
+
+        .progresso{
+            width: 100%;
+            max-width: 923px;
+            margin-right: 10px;
+
+            .indicador{
+                display: flex;
+                justify-content: space-between;
+
+                span{
+                    font-weight: 700;
+                    font-size: 1.25rem;
+                    color: $neutral500;
+                }
+            }
+
+            .progressBar{
+                padding: 8px 0;
+            }
+
+            .pontuacao{
+                display: flex;
+                justify-content: space-between;
+                
+                span{
+                    color: $neutral400;
+                    font-weight: 400;
+                }
+
+                .infoFoguetes{
+                    display: flex;
+
+                    span{
+                        display: block;
+                        color: $neutral600;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+
+        .btnFooter{
+            display: block;
+        }
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 700px) {
+    .footerPage{
+        padding: 10px;
+        position: relative;
+        margin-bottom: 70px;
+
+        .content{
+            padding: 0;
+
+            .progresso{
+                .indicador{
+                    span{
+                        font-size: 1rem;
+                    }
+                }
+
+                .progressBar{
+                    padding: 5px 0;
+                }
+
+                .pontuacao{
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-template-rows: auto;
+                    margin-top: 5px;
+                    
+                    .infoFoguetes{
+                        grid-row: 2;
+                        display: flex;
+
+                        span{
+                            display: block;
+                            margin-right: 10px;
+                            color: $neutral600;
+                        }
+                    }
+
+                    .infoEtapas{
+                        grid-row: 1;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+
+            .btnFooter{
+                display: none;
+            }
+        }
+    }
+}

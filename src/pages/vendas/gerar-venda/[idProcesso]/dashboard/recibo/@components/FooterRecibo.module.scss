@@ -1,0 +1,60 @@
+.footerRecibo{
+    position: fixed;
+    bottom: 0;
+    background: #fff;
+    width: 100%;
+    border: 1px solid var(--neutral-200, #E0E7EB);
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08), 0px 0px 6px 0px rgba(0, 0, 0, 0.02);
+    z-index: 9999;
+}
+
+.content{
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkRecibo{
+    width: 365px;
+}
+
+.btnActive, .btnDisable{
+    display: block;
+}
+
+.btnDisable{
+    cursor: not-allowed;
+}
+
+.infoDownload p{
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    color: #74848B;
+}
+
+@media (max-width: 800px) {
+    .content{
+        padding: 10px 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .checkRecibo{
+        padding: 0 6px;
+    }
+
+    .btnActive {
+        display: block;
+        margin-top: 10px;
+    }
+    
+    .btnDisable{
+        display: none;
+    }
+}

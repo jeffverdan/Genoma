@@ -1,0 +1,23 @@
+@import '../../styles/sass/colors.scss', '../../styles/sass/fonts.scss';
+
+.container {
+    height: 36px;
+    width: auto;
+    left: 0px;
+    top: 0px;
+    border-radius: 10px;
+    padding-right: 13px;
+    // padding: 4px 13px 4px 13px;
+}
+
+.check {
+    span {
+        color: $primary500;
+    }
+    background-color: $primary100;
+}
+
+/*Mobile*/
+@media (max-width: 700px) {
+
+}

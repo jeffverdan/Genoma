@@ -1,0 +1,21 @@
+@import '../sass/colors.scss', '../sass/fonts.scss';
+body {
+
+    .select-pagination {
+        display: flex;
+        height: 36px;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 0px;
+        
+        .MuiSelect-select  {
+            padding: 4px 13px;
+            
+        }
+
+        .select-default {
+            height: 36px;
+        }
+    }
+}

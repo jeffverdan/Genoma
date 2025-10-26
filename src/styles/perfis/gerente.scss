@@ -1,0 +1,307 @@
+@import '../sass/colors.scss', '../sass/fonts.scss';
+
+// PENDENCIAS GERENTE
+.pendencias-parcela-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    gap: 34px;
+    padding-bottom: 143px;
+
+    .header-page {
+        width: 100%;
+    }
+
+    .cards {
+        border-radius: 10px;
+        border: 1px solid $neutral200;
+        background: #FFF;
+        box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.02), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+        padding: 24px;
+        width: 80vw;
+
+        .h4 {
+            color: $neutral600;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 30px;
+        }
+
+        .p1 {
+            color: $neutral600;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px;
+        }
+
+        .p2 {
+            color: $neutral600;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 22px;
+        }
+
+        .header-card {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            .title-icon {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+            svg {
+                fill: $primary500;
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        .header-card.chip-card {
+            justify-content: space-between;
+        }
+
+        .MuiDivider-root {
+            border-color: $neutral200;
+            margin: 18px -24px;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 36px;
+
+            .row {
+                border-radius: 10px;
+                border: 1px solid $neutral200;
+                padding: 23px 33px;
+                display: flex;
+                gap: 69px;
+
+                .campo {
+                    min-width: 110px;
+
+                    .value {
+                        color: $neutral400;
+                        font-size: 14px;
+                    }
+
+                    .chips-container {
+                        display: flex;
+                        gap: 8px;
+                    }
+                }
+            }
+
+        }
+
+        .content-footer {
+            display: flex;
+            justify-content: flex-end;
+            padding-top: 36px;
+            gap: 8px;
+            align-items: center;
+
+            .btn-editar {
+                width: 150px;
+
+                svg {
+                    fill: $primary500;
+                }
+            }
+        }
+
+    }
+
+    .cards.responsaveis {
+        .content {
+            flex-direction: column;
+        }
+
+        .card-responsavel {
+            display: grid;
+            // width: 48%;
+            height: min-content;
+            grid-template-columns: 3fr 1fr;
+            padding: 24px;
+            gap: 24px;
+            border-radius: 10px;
+            border: 1px solid $neutral200;
+            align-items: center;
+
+            p {
+                height: 47px;
+            }
+
+            .p2 {
+                color: $neutral400;
+            }
+
+            .border {
+                padding-bottom: 24px;
+                border-bottom: 1px solid $neutral200;
+                width: 100%;
+            }
+
+            .perfil-nome {
+                color: $neutral600;
+                text-transform: capitalize;
+                font-weight: 700;
+            }
+        }
+
+    }
+
+    footer.footer {
+        height: 111px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 16px;
+        width: 100%;
+        background-color: white;
+        position: fixed;
+        bottom: 0;
+        padding: 0px 39px;
+
+        .checkbox {
+            width: max-content !important;
+            margin: 0;
+
+            span {
+                font-family: Roboto;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 22px;
+                /* 137.5% */
+            }
+        }
+
+        button svg {
+            fill: white;
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+
+.modal-confirm-pendencias {
+    display: flex;
+    gap: 43px;
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        .title {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            text-align: start;
+        }
+
+        .h3 {
+            width: 380px;
+            padding-right: 80px;
+            color: $neutral600;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 36px;
+            /* 112.5% */
+        }
+
+        .p1 {
+            width: 380px;
+            color: $neutral600;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            /* 120% */
+        }
+
+        button svg {
+            fill: white;
+        }
+    }
+}
+
+.responsaveis-pagamento-pendencias {
+    display: flex;
+    width: 72vw;
+    padding: 32px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 44px;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.02), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+
+    .title-chip {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        h3 {
+            color: var(--neutral-600, #464F53);
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+        }
+    }
+
+
+    .responsaveis-pagamento {
+        display: flex;
+        gap: 24px;
+        padding: 16px;
+        width: 100%;
+        border-radius: 10px;
+        border: 1px solid $neutral200;
+        background: #FFF;
+
+        .disable {
+            label {
+                color: $neutral300;
+            }
+
+            .input-default {
+                background-color: $neutral100;
+
+                svg {
+                    fill: $neutral300;
+                }
+            }
+
+        }
+
+        .inputContainer {
+            width: 50%;
+            margin-bottom: 0px;
+        }
+
+        .responsaveis-grid-container {
+            display: grid;
+            grid-template-columns: repeat(1, minmax(200px, 1fr));
+            gap: 16px;
+            width: 100%;
+
+            .responsavel-container {
+                width: 100%;
+                display: flex;
+                gap: 24px;
+            }
+        }
+    }
+}

@@ -1,0 +1,1611 @@
+@import '../sass/colors.scss', '../sass/fonts.scss';
+
+.painel-financeiro {
+    display: flex;
+
+    .icon-menu {
+        width: 24px;
+        height: 24px;
+        fill: $primary500;
+    }
+
+    .menu-lateral {
+        height: calc(100vh - 66px);
+        background: white;
+        border-right: 1px solid $neutral200;
+        z-index: 10;
+
+        .w295 {
+            width: 295px;
+            max-width: 295px;
+            transition-duration: 700ms;
+            transition: width 800ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        }
+
+        .w106 {
+            width: 106px;
+            transition-duration: 700ms;
+            transition: width 800ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        }
+
+        .btn-collapse {
+            width: auto;
+
+            button {
+                height: 60px;
+            }
+        }
+
+        .list-items {
+            display: flex;
+            flex-direction: column;
+            padding: 16px;
+            // height: calc(100vh - 130px);
+            overflow-y: auto;
+            overflow-x: hidden;
+
+            .btn-gerar-venda {
+                span {
+                    color: white;
+                }
+
+                svg {
+                    fill: white !important;
+                }
+
+                margin-bottom: 16px;
+            }
+
+
+            .MuiCollapse-root {
+                min-height: auto !important;
+            }
+
+            .menu-items {
+                svg {
+                    fill: $primary500;
+                }
+
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                align-items: flex-start;
+                white-space: nowrap;
+                // overflow: hidden;
+
+                .item {
+                    span {
+                        font-size: 1rem;
+                    }
+
+                    display: inline-flex;
+                    height: 56px;
+                    gap: 16px;
+                    padding: 4px 22px;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 10px;
+                    font-weight: 700;
+                }
+            }
+
+
+            .venda-items {
+                svg {
+                    margin-right: 15px;
+                    fill: $primary500;
+                }
+
+                padding-left: 20px;
+                max-width: 225px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+
+                div {
+                    display: inline-flex;
+                    height: 56px;
+                    padding: 4px 22px;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 10px;
+                    font-weight: 700;
+                }
+
+                .Mui-selected {
+                    background: $primary100;
+                    color: $primary500;
+                }
+            }
+        }
+    }
+
+    .content-container {
+        width: 100%;
+        height: calc(100vh - 66px);
+        overflow: auto;
+
+        .header-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding: 21px 25px 0px 25px;
+            border-bottom: 1px solid $neutral200;
+            background: #FFF;
+            box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.02), 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
+
+            .row {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .header-title {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+
+                    span {
+                        color: $neutral600;
+                        font-family: Roboto;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 24px;
+                    }
+                }
+
+                .atualizar-lista {
+                    display: flex;
+                    align-items: center;
+                    gap: 13px;
+                }
+
+                .tab-list div div {
+                    height: 60px;
+                    align-items: center;
+                    gap: 8px;
+
+                    button {
+                        text-transform: none !important;
+                        font-weight: 700;
+                        font-size: 16px;
+                        color: $neutral500;
+                        border-radius: 10px;
+                    }
+
+                    .Mui-selected {
+                        color: $primary500 !important;
+                    }
+                }
+
+            }
+
+        }
+
+        .lists-container {
+            // width: 100vw;
+            // max-height: calc(100vh - 57px - 66px);
+
+            overflow: auto;
+            padding: 16px 21px 16px 21px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            .filters-row {
+                display: flex;
+                gap: 15px;
+                align-items: center;
+
+                .autocomplete {
+                    width: 50%
+                }
+
+                .filter-date {
+
+                    input,
+                    .MuiInputBase-root {
+                        padding: 4px 5px;
+                        height: 56px;
+                    }
+                }
+
+                .btn-filter-date button.Mui-disabled {
+                    svg {
+                        fill: $neutral300;
+                    }
+                }
+            }
+
+            .list-table {
+                background: white;
+                border-radius: 12px;
+                border: 1px solid $neutral200;
+
+
+                .list-tools {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 8px 13px;
+
+                    svg {
+                        fill: $primary500;
+                    }
+
+                    .filters {
+                        display: flex;
+                    }
+
+                    .pagination {
+                        display: flex;
+                        align-items: center;
+
+                        span {
+                            font-size: 14px;
+                        }
+
+                        .Mui-selected {
+                            background-color: $primary100;
+                            color: $primary500;
+
+                        }
+
+                        svg {
+                            fill: $primary500;
+                        }
+
+                        button {
+                            border-radius: 10px;
+                            font-size: 16px;
+                            font-weight: 700;
+                            color: $neutral600;
+                        }
+                    }
+                }
+
+                .toolbar-filters {
+                    padding: 0px 23px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 8px;
+
+                    .filter-chip {
+                        border-radius: 10px;
+                        border: 1px solid $primary500;
+                        padding: 4px 12px 4px 10px;
+
+                        span {
+                            font-weight: 700;
+                            color: $primary500;
+                        }
+
+                        svg {
+                            fill: $primary500;
+                        }
+                    }
+                }
+
+                .list-content {
+                    padding-bottom: 5px;
+
+                    .table {
+                        background-color: white;
+
+                        .actions {
+                            text-align: center;
+
+                            .btn-hidden {
+                                visibility: hidden;
+                            }
+                        }
+
+                        .rowHover {
+                            height: 100%;
+                            padding-left: 25px;
+                            border-left: 3px solid $primary200 !important;
+                        }
+
+                        .skeleton-action {
+                            div {
+                                display: flex;
+                                width: 100%;
+                                justify-content: center;
+                            }
+                        }
+
+                        .head-table {
+                            th {
+                                border-bottom: 2px solid $secondary200;
+                                padding: 18px 1vw;
+                            }
+
+                            .first {
+                                padding-left: 1vw;
+                            }
+
+                        }
+
+                        span.MuiCheckbox-colorPrimary {
+                            padding: 0;
+
+                            svg {
+                                fill: $primary500;
+                            }
+                        }
+
+                        .row-table {
+                            height: 100%;
+
+                            .first {
+                                padding: 16px 1vw 16px 1vw;
+                                border-left: 3px solid #fff;
+                            }
+
+                            .col-table {
+                                padding: 16px 1vw;
+                                height: 100%;
+                            }
+
+                            @media (max-width: 1400px) {
+                                .first {
+                                    padding: 16px 8px;
+                                    border-left: 3px solid #fff;
+                                }
+
+                                .col-table {
+                                    // width: min-content;
+                                    padding: 16px 8px;
+                                    height: 100%;
+                                }
+
+                            }
+
+                            .col-table.no-pading {
+                                padding: 16px 0px;
+                            }
+
+                            .col-table.green {
+                                background-color: $green200;
+
+                                p {
+                                    color: $green500;
+                                }
+                            }
+
+                            .col-table.red {
+                                background-color: $red50;
+
+                                p {
+                                    color: $red500;
+                                }
+                            }
+
+                            .col {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+
+                                p {
+                                    color: var(--neutral-500, #5D696F);
+                                    font-size: 1em;
+                                }
+
+                                span {
+                                    color: var(--neutral-400, #74848B);
+                                    font-size: 0.85em;
+                                }
+
+                                .chip span {
+                                    font-size: 0.75em;
+                                }
+                            }
+
+                            .col.data {
+                                gap: 8px;
+                                align-items: start;
+
+                            }
+
+                            .col.text {
+                                align-items: start;
+                            }
+
+                            .col.status {
+                                .chip {
+                                    height: auto;
+                                    padding: 3px 6px;
+                                }
+
+                                .MuiChip-label {
+                                    white-space: normal;
+                                    font-size: 12px;
+                                }
+                            }
+
+                            .graph {
+                                align-items: start;
+                                gap: 5px;
+
+                                span {
+                                    width: 100%;
+                                }
+
+                                span.MuiLinearProgress-root {
+                                    background-color: $neutral200;
+                                    height: 2px;
+                                }
+
+                                span.MuiLinearProgress-bar {
+                                    background-color: $secondary400;
+                                    height: 2px;
+                                }
+
+                                p {
+                                    color: $neutral500;
+                                    font-family: Roboto;
+                                    font-size: 12px;
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    line-height: 18px;
+                                }
+                            }
+
+                            .graph.concluido {
+                                p {
+                                    color: $green500;
+                                    font-weight: 700;
+                                }
+
+                                span.MuiLinearProgress-bar {
+                                    background-color: $green500;
+                                }
+                            }
+
+                            .col.actions {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                height: 100%;
+                            }
+                        }
+
+                        .row-table.novo p {
+                            font-weight: 700;
+                        }
+
+                        td {
+                            width: min-content;
+                            vertical-align: top;
+                            padding-bottom: 0;
+                            height: 90px;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+
+.tooltip-rateio {
+    // background-color: white;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    border: 1px solid $neutral200;
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.02), 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
+    padding: 10px;
+    min-width: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .MuiTooltip-arrow {
+        color: $neutral200;
+    }
+
+    p {
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    .rateio-item {
+        margin-top: 8px;
+        display: flex;
+        gap: 8px;
+
+        .avatar {
+            width: 16px;
+            height: 16px;
+        }
+
+        span {
+            font-size: 12px;
+            white-space: nowrap;
+        }
+
+        span.green {
+            color: $green500;
+        }
+
+        span.orange {
+            color: $secondary500;
+        }
+    }
+}
+
+.status-financeiro {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+    background-color: $neutral50;
+    padding-bottom: 91px;
+
+    .content-container {
+        padding: 0px 141px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding-bottom: 24px;
+
+        .cards {
+            width: 100%;
+            padding: 0;
+
+            .header-card {
+                padding: 16px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                border-bottom: 1px solid $neutral200;
+
+            }
+
+            .ico-label svg {
+                fill: $primary500;
+                width: 20px;
+                height: 20px;
+            }
+
+            .footer-card {
+                padding: 7px 14px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 8px;
+                border-top: 1px solid $neutral200;
+            }
+        }
+
+        .row {
+            display: flex;
+            gap: 24px;
+            width: 100%;
+        }
+
+        .cards.resumo-venda,
+        .cards.comissao {
+            width: calc(50% - 12px);
+        }
+
+        .cards.pagamento {
+            .header-card {
+                justify-content: space-between;
+
+                .ico-label {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                }
+            }
+
+            .content-card {
+                padding: 26px 24px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: #EDF8F7;
+                border-radius: 0px 0px 10px 10px;
+
+                .status-venda {
+                    padding: 16px 24px;
+                    min-width: 391px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-radius: 10px;
+                    border: 1px solid $neutral200;
+                    background: #FFF;
+                    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.02), 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
+                }
+
+                .actions-btns {
+                    display: flex;
+                    gap: 16px;
+                    align-items: center;
+
+                    .btn-status svg {
+                        fill: white;
+                    }
+
+                    .btn-status button {
+                        min-width: 244px;
+                    }
+
+                }
+            }
+        }
+
+        .cards.resumo-venda {
+            .content-card {
+                display: flex;
+                flex-direction: column;
+                padding: 26px 32px;
+                gap: 32px;
+
+                .row-grid {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+
+                    span {
+                        color: $neutral400;
+                    }
+
+                    .parcela {
+                        display: flex;
+                        gap: 8px;
+                    }
+                }
+            }
+        }
+
+        .cards.parcelamento {
+            .content-card {
+                display: flex;
+                gap: 32px;
+                background-color: $neutral100;
+                padding: 32px;
+
+                .card-parcela {
+                    border-radius: 10px;
+                    border: 1px solid $neutral100;
+                    background: #FFF;
+                    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.02), 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
+                    height: min-content;
+                    width: 290px;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 24px;
+                    gap: 12px;
+
+                    .row {
+                        gap: 6px;
+                        align-items: flex-end;
+
+                        .s1 {
+                            font-weight: 700;
+                        }
+
+                    }
+                }
+
+                .card-parcela.neutral {
+
+                    .chip,
+                    .btn-planilha {
+                        display: none;
+                    }
+
+                    .s1,
+                    .p1 {
+                        color: $neutral400;
+                    }
+
+                    .p2 {
+                        color: $neutral400;
+                    }
+                }
+
+                .card-parcela.active {
+                    border: 1px solid $primary400;
+                    width: 290px;
+
+                    .row .s1 {
+                        color: $neutral600;
+                    }
+
+                    .btn-planilha {
+                        span {
+                            color: $primary500;
+                        }
+
+                        button {
+                            border-radius: 10px;
+                            border: 1px solid $primary400;
+                            padding: 2px 10px;
+
+                            &:hover {
+                                background-color: $primary100;
+                                border: 1px solid $primary500;
+                            }
+                        }
+                    }
+
+                    .btn-status-parcela {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .cards.comprovantes-transferencias {
+            padding: 32px;
+            gap: 36px;
+            display: flex;
+            flex-direction: column;
+
+            .comprovantes-container {
+                display: grid;
+                grid-template-columns: 2fr 1fr 1fr 2fr;
+                gap: 24px;
+                row-gap: 4px;
+
+                span.p2 {
+                    color: $neutral400;
+                }
+
+            }
+        }
+
+        .cards.responsaveis-pagamento {
+            padding: 32px;
+            gap: 16px;
+            display: flex;
+            flex-direction: column;
+
+            .header-card {
+                padding: 0px 0px 7px 0px;
+                display: flex;
+                justify-content: space-between;
+
+                .ico-label {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                }
+            }
+
+            .cards-container{
+                display: flex;
+                gap: 20px;
+                width: auto;
+                .card-pagos {
+                    padding: 24px;
+                    // max-width: 499px;
+                    width: 100%;
+                    border-radius: 10px;
+                    border: 1px solid $neutral200;
+                    background: white;
+                    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.02), 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+
+                    .header-card {
+                        padding: 0px;
+                        display: flex;
+                        justify-content: space-between;
+                        border: none;
+                        align-items: flex-start;
+
+                        .chip {
+                            margin-left: 8px;
+                        }
+                    }
+
+                    .content-card-pagos {
+                        display: flex;
+                        gap: 6px;
+                        align-items: flex-end;
+
+                        .s1,
+                        h3 {
+                            color: $green500;
+                            font-weight: 700;
+                        }
+
+                        h3 {
+                            font-family: Lato;
+                            font-size: 32px;
+                            font-style: normal;
+                            line-height: 36px;
+                        }
+                    }
+                }
+            }
+
+            .content-card .MuiCollapse-wrapperInner {
+                gap: 16px;
+                display: flex;
+                flex-direction: column;
+
+
+                .card-responsavel {
+                    display: grid;
+                    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr;
+                    padding: 24px;
+                    gap: 24px;
+                    border-radius: 10px;
+                    border: 1px solid $neutral200;
+                    align-items: center;
+
+                    p {
+                        height: 47px;
+                    }
+
+                    .p2 {
+                        color: $neutral400;
+                    }
+
+                    .border {
+                        padding-bottom: 24px;
+                        border-bottom: 1px solid $neutral200;
+                    }
+
+                    .perfil-nome {
+                        color: $neutral600;
+                        text-transform: capitalize;
+                        font-weight: 700;
+                    }
+
+                    .loading-check {
+                        height: 36px;
+
+                        .MuiCircularProgress-root {
+                            position: relative;
+                            top: -36px;
+                            left: 80%;
+                        }
+                    }
+
+                    .checkbox {
+                        width: 100% !important;
+                        justify-content: center;
+                    }
+
+                    .checkbox.disabled {
+                        cursor: not-allowed;
+                        opacity: 0.5;
+                    }
+
+                    .MuiFormGroup-root {
+                        padding: 0;
+                    }
+
+                    .css-j204z7-MuiFormControlLabel-root {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+        .cards.rateio {
+            padding: 32px;
+            gap: 16px;
+            display: flex;
+            flex-direction: column;
+
+            .header-card {
+                padding: 0px;
+                border: none;
+                justify-content: space-between;
+
+                .ico-label {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                }
+            }
+
+            .cards-container {
+                display: grid;
+                grid-template-columns: 1.2fr 0.8fr;
+                width: 100%;
+                gap: 16px;
+
+                .card-rateio {
+                    padding: 24px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+                    border-radius: 10px;
+                    border: 1px solid $neutral200;
+                    background: white;
+                    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.02), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+
+                    .header-p {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+
+                    .valor-progress {
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                        gap: 8px;
+
+                        .valor {
+                            display: flex;
+                            gap: 6px;
+                            align-items: flex-end;
+
+                            .s1,
+                            h3 {
+                                color: $neutral600;
+                                font-weight: 700;
+                            }
+                        }
+                    }
+
+                    .footer-p {
+                        display: flex;
+                        justify-content: flex-end;
+                        gap: 6px;
+
+                        .valor {
+                            font-weight: 700;
+                        }
+
+                    }
+                }
+
+                .card-falta-ratear {
+                    padding: 24px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 24px;
+                    border-radius: 10px;
+                    border: 1px solid $neutral200;
+                    background: white;
+                    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.02), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+
+                    .valor {
+                        display: flex;
+                        gap: 6px;
+                        align-items: flex-end;
+                        width: 100%;
+                        justify-content: center;
+
+                        .s1,
+                        .h2 {
+                            color: $red500;
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+            
+            .pessoa-rateio.hidden-recibo {
+                grid-template-columns: 20vw 20vw calc(10vw + 100px) 100px;
+                @media (min-width: 1600px) {                    
+                    grid-template-columns: 20vw 30vw calc(10vw + 100px) 100px;    
+            }
+            }
+
+            .pessoa-rateio {                
+                @media (min-width: 1600px) {                    
+                        grid-template-columns: 20vw 30vw calc(10vw + 100px) 100px;    
+                }
+
+                display: grid;
+                grid-template-columns: 20vw 20vw 10vw 100px 100px;
+                gap: 16px;
+                align-items: center;
+                padding: 24px;
+                border-radius: 10px;
+                border: 1px solid $neutral200;
+                background-color: white;
+                justify-content: space-between;
+
+                .p2 {
+                    font-weight: 700;
+                }
+
+                .valor-progress {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+
+                }
+
+                .btn-collapse,
+                .btn-liberar,
+                .btn-recibo {
+                    // justify-self: flex-start;
+
+                    button {
+                        width: 100%;
+                        min-width: 99px;
+                    }
+                }
+
+                .MuiButton-outlined span {
+                    color: $primary500;
+
+                    &:hover {
+                        color: $primary600;
+                    }
+                }
+
+                .MuiButton-contained span {
+                    color: white;
+                }
+
+                .btn-collapse svg {
+                    fill: $primary500;
+
+                    &:hover {
+                        fill: $primary600;
+                    }
+                }
+            }
+
+        }
+
+    }
+
+    .footer-financeiro {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 16px 16px;
+        width: 100%;
+        background-color: white;
+        border-top: 1px solid $neutral200;
+
+        button svg {
+            fill: white;
+        }
+
+        button span circle {
+            stroke: white;
+        }
+    }
+
+    .p1 {
+        color: $neutral600;
+        font-family: Roboto;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px;
+    }
+
+    .p2 {
+        color: $neutral600;
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+    }
+
+    .s1 {
+        color: $neutral400;
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+    }
+
+    .s2 {
+        color: $neutral400;
+        font-family: Roboto;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+    }
+}
+
+.corner-financeiro {
+    border-radius: 10px;
+    border: 1px solid $neutral200;
+    background: #FFF;
+    padding: 32px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.02), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+
+    .content-corner {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+
+        .p1 {
+            color: $secondary500;
+
+        }
+
+        .subtitle {
+            max-width: 307px;
+        }
+
+        .footer-actions {
+            display: flex;
+            gap: 16px;
+        }
+    }
+}
+
+.dialog-liberar-comissao {
+    .MuiPaper-root {
+        width: 806px !important;
+        height: 650px !important;
+        padding: 23px 29px;
+
+        .icon-close {
+            margin-top: 40px;
+            margin-right: 40px;
+
+            svg {
+                fill: $primary500;
+            }
+        }
+
+        .content-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 32px;
+
+            .h3 {
+                font-weight: 700;
+            }
+
+            .row-adress {
+                .row-ico {
+                    display: flex;
+                    gap: 6px;
+                    align-items: center;
+
+                    .p2 {
+                        color: $neutral400;
+                    }
+
+                    svg {
+                        fill: $primary500;
+                    }
+                }
+
+                .rua {
+                    padding-left: 30px;
+                }
+            }
+
+            .gerente-container {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+
+                .s2 {
+                    color: $neutral500;
+                    font-size: 12px;
+                }
+
+                .p2 {
+                    color: $neutral600;
+                    font-weight: 700;
+                }
+            }
+
+            .card-valor {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                width: 414px;
+                padding: 24px;
+                border-radius: 10px;
+                border: 1px solid $neutral200;
+                background: white;
+                box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.02), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+
+                .s2 {
+                    color: $neutral400;
+                }
+
+                .valor {
+                    display: flex;
+                    align-items: baseline;
+
+                    // gap: 6px;
+                    .p2 {
+                        color: $green500;
+                        font-weight: 700;
+                    }
+
+                    .valor-number {
+                        font-size: 32px
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.dialog-cancelar-parcela {
+    .MuiPaper-root {
+        width: 806px !important;
+        height: 650px !important;
+        padding: 23px 29px;
+
+        .icon-close {
+            margin-top: 40px;
+            margin-right: 40px;
+
+            svg {
+                fill: $primary500;
+            }
+        }
+
+        .content-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 24px;
+
+            .h3 {
+                font-weight: 700;
+            }
+
+            .row-adress {
+                .row-ico {
+                    display: flex;
+                    gap: 6px;
+                    align-items: center;
+
+                    .p2 {
+                        color: $neutral400;
+                    }
+
+                    svg {
+                        fill: $primary500;
+                    }
+                }
+
+                .rua {
+                    padding-left: 30px;
+                }
+            }
+
+            .gerente-container {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+
+                .s2,
+                b {
+                    color: $neutral500;
+                    font-size: 12px;
+                }
+
+                .p2 {
+                    color: $neutral600;
+                    font-weight: 700;
+                }
+            }
+
+            .inputContainer {
+                margin-bottom: 0;
+            }
+
+            .text-area-container {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.container-alterar-status {
+    margin-bottom: 111px;
+
+    .content-alterar-status {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+        width: 100%;
+        padding: 46px;
+
+        .card-status {
+            display: flex;
+            padding: 32px;
+            flex-direction: column;
+            gap: 44px;
+            border-radius: 10px;
+            background: #FFF;
+            box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.02), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+            width: 72vw;
+            max-width: 1042px;
+
+            h3 {
+                font-weight: 700;
+                color: $neutral600;
+            }
+
+            .status-venda {
+                display: flex;
+                padding: 16px 24px;
+                width: max-content;
+                align-items: center;
+                gap: 16px;
+                border-radius: 10px;
+                border: 1px solid var(--neutral-200, #E0E7EB);
+                background: #FFF;
+                box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.02), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+            }
+
+            .inputContainer {
+                width: 481px;
+            }
+        }
+
+        .card-responsaveis {
+            display: flex;
+            width: 72vw;
+            max-width: 1042px;
+            padding: 32px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 44px;
+            border-radius: 10px;
+            background: #FFF;
+            box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.02), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+
+            h3 {
+                font-weight: 700;
+                color: $neutral600;
+            }
+
+            .responsaveis-div {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+                width: 100%;
+
+                .responsaveis-header {
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
+
+                    .p2 {
+                        text-transform: capitalize;
+                        font-weight: 700;
+                        color: $neutral500;
+                    }
+                }
+
+                .responsavel-row {
+                    display: flex;
+                    align-items: center;
+                    padding: 24px;
+                    gap: 45px;
+                    align-self: stretch;
+                    border-radius: 10px;
+                    border: 1px solid $neutral200;
+
+                    .checkbox {
+                        margin-bottom: 0;
+                        padding: 0;
+                        height: auto;
+                        // width: 100% !important;
+                        justify-content: center;
+
+                        .MuiFormGroup-root {
+                            padding: 0;
+                        }
+
+                        .MuiFormControlLabel-root {
+                            margin: 0;
+                        }
+                    }
+
+                    .p2 {
+                        color: $neutral400;
+                    }
+
+                }
+            }
+
+        }
+
+        .card-observacoes {
+            display: flex;
+            gap: 44px;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 72vw;
+            max-width: 1042px;
+            padding: 32px;
+            border-radius: 10px;
+            background: #FFF;
+            box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.02), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+
+            h3 {
+                font-weight: 700;
+                color: $neutral600;
+            }
+
+            .p1 {
+                color: $neutral500;
+                font-family: Roboto;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                max-width: 700px;
+            }
+
+            .text-area-container {
+                width: 100%;
+            }
+        }
+    }
+
+    footer {
+        height: 111px;
+        width: 100%;
+        border: 1px solid var(--neutral-200, #E0E7EB);
+        background: #FFF;
+        box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.02), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+        position: fixed;
+        bottom: 0;
+        padding: 0px 39px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        svg {
+            width: 20px;
+            height: 20px;
+            fill: white;
+        }
+    }
+}
+
+.financeiro-transferir {
+    padding-bottom: 111px;
+    /* Espaço para o footer */
+
+    .content-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+        gap: 32px;
+        padding: 32px;
+
+        .card-transferir {
+            display: flex;
+            width: 72vw;
+            padding: 32px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 44px;
+            border-radius: 10px;
+            background: #FFF;
+            box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.02), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+
+            h3 {
+                color: $neutral600;
+                font-size: 32px;
+                font-weight: 700;
+            }
+        }
+
+        .rateio {
+            .header-rateio {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .s2 {
+                color: $neutral600;
+                font-size: 12px;
+                font-weight: 700;
+            }
+
+            .info-bancarias {
+                display: flex;
+                padding: 24px;
+                flex-direction: column;
+                gap: 24px;
+                width: 100%;
+                border-radius: 10px;
+                border: 1px solid var(--neutral-200, #E0E7EB);
+                box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.02), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+
+                .grid-table {
+                    display: grid;
+                    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+                    gap: 24px;
+
+                    .p2 {
+                        line-height: 22px;
+                        /* 137.5% */
+                    }
+
+                    .sub {
+                        color: $neutral400;
+                        font-weight: 400;
+                    }
+                }
+            }
+
+            .row-inputs {
+                display: flex;
+                gap: 24px;
+                width: 100%;
+
+                .inputContainer {
+                    width: calc(50% - 12px);
+                }
+            }
+        }
+
+        .comprovante {
+            .upload-container {
+                width: 100%;
+            }
+        }
+
+        .observacoes {
+            .p1 {
+                color: $neutral500;
+                width: 70%;
+                font-weight: 400;
+            }
+
+            .text-area-container {
+                width: 100%;
+            }
+        }
+    }
+
+    footer {
+        height: 111px;
+        width: 100%;
+        border: 1px solid var(--neutral-200, #E0E7EB);
+        background: #FFF;
+        box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.02), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+        position: fixed;
+        bottom: 0;
+        padding: 0px 39px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        svg {
+            width: 20px;
+            height: 20px;
+            fill: white;
+        }
+    }
+}
+
+.tooltip-rateio-container {
+    // display: flex;
+    // flex-direction: column;
+    padding: 8px;
+    gap: 6px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}

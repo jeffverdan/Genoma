@@ -1,0 +1,367 @@
+@import '../sass/colors.scss', '../sass/fonts.scss';
+
+.menu-gestao-container {
+
+    .icon-primary svg {
+        fill: $primary500;
+    }
+
+    .header-container {
+        display: flex;
+        flex-direction: column;
+        gap: 31px;
+        padding: 21px 32px 0px 32px;
+        border-bottom: 1px solid $neutral200;
+        background: #FFF;
+        box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.02), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+
+        .title-container {
+            display: flex;
+            gap: 8px;
+
+            h4 {
+                color: $neutral600;
+                font-family: Roboto;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 24px;
+            }
+
+            svg {
+                width: 24px;
+                height: 24px;
+                fill: $primary500;
+            }
+        }
+
+        .tab-menu {
+            button {
+                // color: $neutral600;
+                font-family: Roboto;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 22px;
+                text-transform: none;
+            }
+
+            .Mui-selected button {
+                color: $primary500;
+            }
+        }
+    }
+
+    .gestao-content {
+        width: 100%;
+        height: calc(100vh - 126px - 66px);
+        overflow: auto;
+
+        .gestao-graficos {
+            padding: 24px 21px;
+
+        }
+
+        .escrituras-content {
+            padding: 24px 21px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+
+
+            .header-title {
+                h2 {
+                    color: $neutral600;
+                    font-family: Roboto;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 24px;
+                    /* 120% */
+                }
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .filters-row {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+
+                    .inputContainer {
+                        margin: 0;
+
+                        .MuiInputBase-root:hover {
+                            background-color: white;
+                        }
+                    }
+
+                    #mes_select {
+                        display: flex;
+                        height: 36px;
+                        min-width: 60px;
+                        width: max-content;
+                        padding: 4px 13px;
+                        padding-right: 32px;
+                        // justify-content: center;
+                        align-items: center;
+                        // gap: 16px;
+                    }
+                }
+            }
+
+            .cards {
+                width: 100%;
+
+                .title-action {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 17px;
+                    border-bottom: 1px solid $neutral200;
+                    align-items: center;
+
+                    h3 {
+                        color: $neutral600;
+                        font-family: Roboto;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 22px;
+                        /* 137.5% */
+                    }
+
+                    .pagination-container {
+                        .MuiPagination-ul {
+                            flex-wrap: nowrap;
+                        }
+                        svg {
+                            fill: $primary500;
+                        }
+
+                    }
+
+
+                }
+
+                .footer {
+                    border-top: 1px solid $neutral200;
+                    padding: 17px;
+                }
+            }
+
+            // .grafico-escrituras 
+            .table-escrituras {
+                .MuiTableCell-head {
+                    color: $neutral600;
+                    font-family: Roboto;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 22px;
+                }
+
+                .MuiTableRow-root {
+                    p {
+                        color: $neutral500;
+                        font-family: Roboto;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 22px;
+                    }
+
+                    .avatar {
+                        display: flex;
+                        gap: 8px;
+                        align-items: center;
+
+                        .MuiAvatar-root {
+                            width: 24px;
+                            height: 24px;
+                            font-size: 12px;
+                        }
+                    }
+
+                    .endereco {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 4px;
+
+                        span {
+                            color: $neutral400;
+                            font-family: Roboto;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 20px;
+                            /* 142.857% */
+                        }
+                    }
+
+                    .forma-pagamento {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 2px;
+                    }
+
+                }
+
+                .css-11xur9t-MuiPaper-root-MuiTableContainer-root {
+                    border-radius: 0px;
+                    box-shadow: none;
+                }
+
+                .css-gbczhs-MuiTableRow-root.Mui-selected {
+                    background-color: $neutral100;
+                }
+
+                .collapse-container {
+
+                    .timeline-container {
+                        border-bottom: 1px solid $neutral200;
+                        display: flex;
+                        padding: 16px 24px;
+                        flex-direction: column;
+                        gap: 24px;
+                        background-color: $neutral50;
+
+                        .p2 {
+                            color: $neutral500;
+                            font-family: Roboto;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 22px;
+                        }
+
+                        .timeline-content {
+
+                            .stack-line {
+                                gap: 4px;
+
+                                .status-content {
+                                    p {
+                                        color: $neutral400;
+                                        font-family: Roboto;
+                                        font-size: 12px;
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        line-height: 20px;                                        
+                                        white-space: nowrap;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                        max-width: 56px;
+                                        /* 142.857% */
+                                    }
+
+                                }
+                            }
+
+                        }
+                    }
+                }
+
+            }
+
+
+        }  
+
+        .gerenciamentoPosvenda-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;            
+            padding-bottom: 20px;            
+            width: 100%;            
+        
+            .header-gerenciamento {
+                display: flex;
+                justify-content: right;
+                align-items: center;
+                background-color: white;
+                height: 61px;
+                border-bottom: 1px solid #E0E7EB;
+        
+                .atualizar-lista {
+                    display: flex;
+                    align-items: center;
+                    padding-right: 18px;
+                    height: 60px;
+        
+                    div:first-child {
+                        margin-right: 13px;
+        
+                        svg {
+                            fill: $primary500 ;
+                        }
+                    }
+        
+                    span:last-child {
+                        color: $neutral400;
+                        font-weight: 400;
+                    }
+                }
+            }
+        
+            .graphics-container {                
+                padding: 0px 20px;        
+        
+                .MuiChartsLegend-root {
+                    tspan {
+                        font-size: 12px;
+                    }
+                }
+        
+                span.MuiCheckbox-colorPrimary {
+                    padding: 0;
+        
+                    svg {
+                        fill: $primary500;
+                    }
+                }
+            }
+        
+            .table-resp {
+                margin: 0px 20px;
+                // overflow-x: hidden;
+                padding-bottom: 20px;
+                padding-top: 6px;
+                height: max-content;
+                background: white;
+                border-radius: 12px;
+                border: 2px solid #E0E7EB;
+        
+        
+                .table {
+                    background-color: white;
+        
+                    .actions {
+                        text-align: center;
+                    }
+        
+                    .rowHover {
+                        padding-left: 13px;
+                        border-left: 3px solid $primary200 !important;
+                    }
+        
+                    .skeleton-action {
+                        div {
+                            display: flex;
+                            width: 100%;
+                            justify-content: center;
+                        }
+                    }
+        
+                    .head-table {
+                        th {
+                            border-bottom: 2px solid $secondary200;
+                        }
+        
+                    }
+        
+        
+                }
+            }
+        }
+    }
+}

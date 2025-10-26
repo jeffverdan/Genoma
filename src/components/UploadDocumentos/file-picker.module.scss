@@ -1,0 +1,274 @@
+@import '../../styles/sass/colors.scss', '../../styles/sass/colors.scss';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /*width: 600px;*/
+  padding: 1rem;
+  width: 100%;
+}
+
+.canvas_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.rows_docs{
+  display: flex;
+}
+
+.files_list_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.files_list_progress_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.upload_button {
+  min-width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  background-color: #0073cf;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  white-space: nowrap;
+  padding: 0.25rem 0.5rem;
+
+  &.disabled {
+    background-color: #ccc;
+    color: #fff;
+    cursor: not-allowed;
+  }
+}
+
+.btn_clear {
+  background-color: $red500;
+  height: 56px;
+  padding: 6px 22px;
+  border-radius: 10px;
+
+  span {
+    margin-right: 0;
+  }
+
+  svg {
+    fill: white;      
+  }
+}
+
+.loading_doc{
+  width: 100%;
+  margin: 20px 0;
+
+  .row{
+    // width: 100%;
+    display: flex;    
+    justify-content: space-between;
+    align-items: flex-end;
+
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid $neutral200;
+    background: $white;
+
+    .progressBar{
+      width: 100%;
+      position: relative;
+      top: -5px;
+
+      // .react-sweet-progress-symbol{
+      //   display: none !important;
+      // }
+    }
+
+    // .react-sweet-progress-symbol{
+    //   display: none !important;
+    // }
+
+    .label{
+      color: $neutral300;
+      font-weight: 400;
+      font-size: 1.25rem;
+      margin-right: 10px;
+    }
+    .progress{
+      width: 100%;
+      margin-left: 5px;
+      position: relative;
+      top: -5px;
+    }
+    span{
+      display: block;
+    }
+  }
+}
+
+.row_docs{
+  width: 100%;
+
+  .files_list_docs{
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .input_doc{
+    margin: 0 15px
+  }
+}
+
+
+// NOVO
+.form_drop_files{
+  border-radius: 10px;
+  border: 2px dashed $primary400;
+  background: $primary100;
+  width: 100%;  
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  cursor: pointer;
+  padding: 35px;
+
+  svg {
+    stroke: $primary500;    
+    margin-bottom: 10px;
+  }
+
+  .text{
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    display: block;
+    margin-bottom: 28px;
+  }
+
+  button {
+    span {
+      color: white;
+    }
+  }
+}
+
+.row{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  .list{
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+
+    .docs{
+      max-width: 320px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      background: $primary100;
+      padding: 16px 23px;
+      //margin-bottom: 32px;
+      margin: 0 15px 0 15px;
+      border-radius: 10px;
+      height: 56px;
+      cursor: pointer;
+      justify-content: space-between;
+
+      .check_icon{
+        position: relative;
+        top: 4px;
+        width: 20px;
+        height: 20px;
+
+        svg, path{
+          color: $primary500;
+        }
+      }
+      
+      span{
+        color: $primary500;
+        font-weight: 700;
+        font-size: 1.25rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-decoration: underline;
+      }
+    }
+
+    .error{
+      justify-content: space-between;
+      cursor: not-allowed;
+      background: $white;
+      border-radius: 10px;
+      border: 3px solid #F9D2D2;
+
+      span {
+        color: red;
+        text-decoration: inherit;
+      }
+
+      .error_icon{
+        position: relative;
+        top: 4px;
+        width: 20px;
+        height: 20px;
+
+        svg, path{
+          color: $red500;
+        }
+      }
+    }
+  }
+
+  .lineError{
+    font-size: 0.8 rem;
+    font-style: normal;
+    font-weight: 700;
+    margin: 10px 0;
+    color: $red500;
+  }
+}
+
+
+@media screen and (max-width: 750px) {
+  .form_drop_files{
+    .text{
+      display: none;
+    }
+  }
+  
+  .row {
+    .list {
+      .docs {
+        min-width: 0 !important; // Garante que pode encolher até 0
+        width: 0;                // Permite encolher ao máximo
+        flex: 1 1 0;
+        max-width: inherit;
+      }
+    }
+  }
+}

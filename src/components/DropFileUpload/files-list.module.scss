@@ -1,0 +1,52 @@
+@import '../../styles/sass/colors.scss', '../../styles/sass/colors.scss';
+
+.files_list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.files_list_item {
+  width: calc(100% - 1rem);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+
+  .btn_clear {
+    background-color: $red500;
+    height: 42px;
+    span {
+      margin-right: 0;
+    }
+
+    svg {
+      fill: white;      
+    }
+  }
+
+  // .btn_name:hover {
+  //   background-color: $primary300;
+  //   span {
+  //     color: white;
+  //   }
+  // }   
+  .btn_name {
+    background-color: $primary100;
+    box-shadow: none;
+    cursor: auto;
+    height: 42px;
+
+    span {
+      color: $primary500;
+      max-width: 130px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}

@@ -1,0 +1,138 @@
+@import '../../styles//sass/colors.scss', '../../styles//sass/fonts.scss';
+
+.container{
+    max-width: 1160px;
+    width: 100%;
+    margin: 0 auto 35px;
+    background: $white;
+    border-radius: 10px;
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.08)) drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.02));
+
+    .content{
+        .header{
+            padding: 20px;
+        }
+
+        .header{
+            color: $neutral600;
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        .footer{
+            display: flex;
+            justify-content: flex-end;
+            padding: 10px;
+        }
+
+        .listItems{
+            background-color: $neutral50;
+            padding: 0 0 40px 0;
+            border-top: 1px solid $neutral200;
+            border-bottom: 1px solid $neutral200;
+            max-height: 500px;
+            height: auto;
+            overflow: auto;
+
+            .item{
+                //border-top: 1px solid $neutral200;
+                border-bottom: 1px solid $neutral200;
+                background: $white;
+                padding: 20px;
+                display: flex;
+                justify-content: space-between;
+                padding: 24px;
+
+                .row{
+                    .title{
+                        font-weight: 700;
+                        color: $neutral600;
+                        font-size: 16px;
+                        margin-bottom: 10px;
+                    }
+
+                    .description{
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: $neutral400;
+                        line-height: 20px;
+                    }
+                }
+
+                .row1{
+                    width: 100%;
+                    padding: 0 20px;
+                    display: flex;
+                    gap: 35px;
+
+                    .persona{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+    
+                        span{
+                            display: block;
+                            text-align: center;
+                            margin-top: 5px;
+                        }
+                    }
+
+                    .col{
+                        max-width: 754px;
+                        width: 100%;
+                        //margin-left: 35px;
+                    }
+                }
+
+                .row2{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 15px;
+
+                    .info{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 15px;
+                    }
+
+                    .info{
+                        .data{
+                            font-size: 14px;
+                            color: $neutral400;
+                            font-weight: 400;
+                        }
+                    }
+                    .action{
+                        display: none;
+                    }
+                }
+            }
+
+            .item:hover{
+                background-color: #E0E7EB;
+                button:hover{
+                    background-color: white;
+                }
+
+                .row2{
+                    .info{
+                        display: none;
+                    }
+                    .action{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 15px;
+
+                        btnAction{
+                            background-color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

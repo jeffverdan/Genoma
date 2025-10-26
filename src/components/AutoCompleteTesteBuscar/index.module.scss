@@ -1,0 +1,81 @@
+@import '../../styles/sass/colors.scss', '../../styles/sass/colors.scss';
+
+.container {
+    display: flex;
+    align-items: center;
+
+    .icon {
+        position: relative;
+        margin-left: 10px;
+        margin-right: -30px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .autocomplete {
+        background-color: white;
+        border-radius: 12px;
+
+        div:first-child {
+            border-radius: 12px;
+        }
+
+        input:first-child {
+            padding-left: 30px;
+        }
+    }
+}
+
+
+.sucess {
+    svg {
+        fill: $primary500;
+    }
+
+    .autocomplete {
+        background-color: $primary100;
+        
+        div:first-child {
+            border-color: $primary500;
+        }
+
+        input {
+            color: $primary500;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+        }
+    }
+
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logradouro {
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+    color: $neutral600;
+}
+
+.complemento {
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    color: $neutral400;
+    text-align: right;
+}
+
+/* Mobile */
+@media (max-width: 1200px) {
+    .complemento {
+        display: none;
+    }
+}

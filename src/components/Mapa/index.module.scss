@@ -1,0 +1,59 @@
+.compMaps{
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 633px;
+    height: auto;
+
+    div{
+        //max-height: 533px !important;
+        max-height: 633px !important;
+        border-radius: 10px;
+    }
+
+    .imgMap{
+        object-fit: cover;
+        display: block;
+        width: 100%;
+        height: 100%;
+        max-height: 633px;
+        border-radius: 10px;
+    }
+}
+
+//Altura menor
+@media (max-height: 730px) {
+    .compMaps{
+        max-height: 540px !important;
+
+        div{
+            max-height: 540px !important;
+        }
+    }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+
+    .compMaps{
+        /*max-height: 350px;*/
+        //height: 410px;
+        max-width: inherit;
+        overflow: hidden;
+
+        div{
+            max-height: 350px !important;
+        }
+
+        .imgMap{
+            position: relative;
+            top: 0;
+        }
+    }
+
+}
+
+/* Tablet */
+@media (max-width: 1120px) {
+
+}

@@ -1,0 +1,223 @@
+@import '../../styles//sass/colors.scss', '../../styles//sass/fonts.scss';
+
+.container{
+    width: 100%;
+    max-width: 1396px;
+    margin: 25px auto 0;
+    padding: 0 20px;
+
+    .content{
+        border-radius: 10px;
+        border: 1px solid #E0E7EB;
+        background: #FFF;
+        display: flex;
+        flex-direction: column;
+        // box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+        filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.08)) drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.02)); 
+
+        .header,
+        .footer{
+            padding: 10px 15px;
+        }
+
+        .header, .info{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header{
+            width: 100%;
+
+            .title{
+                font-weight: 700;
+                font-size: 1.25rem;
+            }
+
+            .info{
+                .diasCorridos{
+                    color: $neutral400;
+                    font-weight: 400;
+                    font-size: 0.9rem;
+                    margin-right: 15px;
+                    text-transform: uppercase;
+                    display: flex;
+                }
+
+                .verDetalhes{
+                    margin-left: 15px;
+                   
+                    svg{
+                        color: #01988Ced;
+
+                        path{
+                            color: #01988C;
+                        }
+                    }
+                }
+            }
+        }
+
+        .scrollable {
+            width: 100%;
+            overflow-x: auto; /* Adiciona a barra de rolagem horizontal */
+            white-space: nowrap; /* Impede que o conteúdo quebre em várias linhas */
+        }
+
+        .grab{
+            cursor: grab; /* Muda o cursor para uma mãozinha para indicar que é clicável */
+        }
+        .grab:active{
+            cursor: grabbing; /* Muda o cursor quando o grab estiver ativo para o novo ícone */
+        }
+
+        .blocks{
+            background: $primary100;
+            padding: 50px 15px;
+            display: flex;
+            align-items: center;
+
+            .row{
+                width: 200px;
+            }
+
+            .card{
+                cursor: pointer;
+                width: 200px;
+                height: 172px;
+                background: $white;
+                border-radius: 10px;
+                filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.08)) drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.02)); 
+                padding: 15px 25px;
+                position: relative;
+
+                .chipCard{
+                    text-align: left;
+                    position: relative;
+                    top: -8px;
+                    left: -15px;
+                }  
+
+                .cardContent{
+                    text-align: center;
+                }
+
+                .icon{
+                    display: flex;
+                    margin: 0 auto 5px;
+                    justify-content: center;
+                    align-items: center;
+
+                    svg{
+                        width: 60px;
+                        height: 45px;
+                    }
+                    
+                }
+
+                .status{
+                    font-size: 20px;
+                    font-weight: 700;
+                    white-space: pre-line;
+                }
+
+                .data{
+                    margin-top: 10px;
+                    font-size: 0.75rem;
+                    font-weight: 400;
+                    color: $neutral400;
+
+                    span{
+                        color: $neutral400;
+                        font-weight: 700;
+                        font-size: 12px;
+                        font-family: Roboto;
+                    }
+                }
+            }
+
+            .card:hover{
+                // background-color: rgba(0, 0, 0, 0.04);
+                // border-color: rgba(0, 0, 0, 0.04);
+                filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.08)) drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.15)); 
+            }
+
+            .btnDetalhe{
+                margin-top: 10px;
+                width: 203px;
+            }
+
+            .feito{
+                .icon{
+                    svg{
+                        path{
+                            color: $green500;
+                        }
+                    }
+                }
+                .status{
+                    color: $green500;
+                }
+            }
+
+            .atual{
+                .icon{
+                    svg{
+                        path{
+                            color: $primary500;
+                        }
+                    }
+                }
+                .status{
+                    color: $neutral600;
+                }
+            }
+
+            .cardBtn{
+                width: 200px;
+                text-align: center;
+                padding: 25px;
+                cursor: pointer;
+
+                .icon{
+                    svg{
+                        height: 60px;
+                    }
+                }
+                .iconAdd{
+                    svg{
+                        path{
+                            color: $primary500;
+                        }
+                    }
+                }
+
+                .status{
+                    white-space: inherit;
+                }
+            }
+        }
+        
+
+        .footer{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .consulta_rgi {
+                display: flex;
+                gap: 8px;
+                span {
+                    color: $neutral400;
+                }
+            }
+
+            .btnFooter{
+                width: auto;
+
+                svg{
+                    fill: $white
+                }
+            }
+        }
+    }
+}

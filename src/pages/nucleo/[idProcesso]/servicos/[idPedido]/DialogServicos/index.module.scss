@@ -1,0 +1,96 @@
+@import '@/styles/sass/colors.scss';
+
+.row {
+    display: flex;
+    justify-content: space-between;
+
+    .coll {
+        .close {
+            display: block;
+        }
+
+        .mobileClose {
+            display: none;
+        }
+
+        h2 {
+            width: 317px;
+            line-height: 42px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .content {
+            color: $neutral600;
+            margin-top: 25px;
+
+            p {
+                margin-bottom: 25px;
+            }
+
+            ul {
+                padding-left: 25px;
+            }
+        }
+    }
+
+    .coll:nth-child(2) {
+        padding: 50px 25px 50px 90px;
+    }
+}
+
+.buttonArea {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+
+    button:nth-child(1) {
+        margin-left: 20px;
+    }
+}
+
+/*Mobile*/
+@media(max-width: 700px) {
+    .row {
+        display: block;
+
+        .coll {
+            .close {
+                display: none;
+            }
+
+            .mobileClose {
+                display: block;
+                display: flex;
+                justify-content: flex-end;
+                margin-bottom: 15px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+                line-height: 30px;
+            }
+
+            .content {
+                color: $neutral600;
+                margin-top: 25px;
+            }
+        }
+
+        .coll:nth-child(2) {
+            padding: 20px;
+        }
+    }
+
+    .buttonArea {
+        display: flex;
+        width: 100%;
+        max-width: inherit;
+        margin-top: 30px;
+    }
+}

@@ -1,0 +1,56 @@
+.containerBlock {
+  
+
+  .headerBlock {
+    h3 {
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    p {
+      width: 52vw;
+      margin-bottom: 22px;
+    }
+  }
+
+  .inputBlock {
+    width: 440px;
+    margin-bottom: 44px;
+  }
+
+  .img {    
+    width: 11vw;
+    height: 14vw;
+    padding-top: 0.5vw;
+  }
+
+  .containerLaudemios {
+    display: flex;
+    justify-content: space-between;
+
+    div {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .img {
+    display: none !important;
+  }
+}
+
+@media (max-width: 700px){
+  .containerBlock{
+    .headerBlock {
+      p {
+        width: 100%;
+        margin-bottom: 44px;
+      }
+    }
+  
+    .inputBlock {
+      width: 100%;
+      margin-bottom: 44px;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@import '@/styles/sass/colors.scss';
+
+.containerImovel {
+  height: calc(100vh - 66px);
+  width: 100vw;
+  background-color: $neutral50;
+  display: flex;
+  //overflow: auto;
+
+  .menu {    
+    width: 20vw;
+    height: calc(100vh - 66px);
+    background-color: $white;
+    position: relative;
+    border-right: 1px solid $neutral200;
+  }
+
+  .imovelContent {
+    z-index: 1;    
+    width: 80vw;
+    height: calc(100vh - 148px);   
+    //overflow-y: auto;
+  }
+
+  .imovelFooter {
+    width: 80vw;
+    height: 82px;
+    //height: 111px;
+    // background-color: red;  
+    
+    position: absolute !important;
+    bottom: 0 !important;
+    overflow: hidden;
+  }
+}
+
+
+@media (max-width: 700px) {
+  .containerImovel{
+    .imovelContent{
+      width: 100%;
+      padding: 0;
+    }
+
+    .imovelFooter{
+      display: none;
+    }
+  }
+}

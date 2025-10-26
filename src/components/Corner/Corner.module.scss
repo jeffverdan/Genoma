@@ -1,0 +1,21 @@
+.cornerInfo{
+    border-radius: 10px;
+    border: 1px solid var(--neutral-200, #E0E7EB);
+    background: #FFF;
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.02), 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
+    width: 560px;
+    height: auto;
+    padding: 32px;
+}
+
+.header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.close{
+    cursor: pointer;
+    position: relative;
+    z-index: 999;
+}

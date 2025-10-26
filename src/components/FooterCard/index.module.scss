@@ -1,0 +1,99 @@
+@import "../../styles/sass/colors.scss", "../../styles/sass/fonts.scss";
+
+/*Desktop*/
+.footerPage{    
+    width: 100%;
+    background: $white;
+    height: 82px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    bottom: 0;
+    border-top: 1px solid #E0E7EB;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.02), 0px 2px 4px rgba(0, 0, 0, 0.08);    
+    padding: 14px 30px;
+
+    .content{        
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .progresso{
+            width: 70%;
+            // width: 65%;
+            // max-width: 923px;
+            margin-right: 10px;
+
+            .indicador{
+                span{
+                    font-weight: 700;
+                    font-size: 1.25rem;
+                    color: $neutral500;
+                }
+            }
+
+            .progressBar{
+                padding: 8px 0;
+            }
+        }
+
+        .btnFooter{
+            //width: 302px;            
+            width: auto;
+        }
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 700px) {
+    .footerPage{
+        padding: 10px;
+        position: relative;
+        margin-bottom: 70px;
+
+        .content{
+            padding: 0;
+
+            .progresso{
+                .indicador{
+                    span{
+                        font-size: 1rem;
+                    }
+                }
+
+                .progressBar{
+                    padding: 5px 0;
+                }
+
+                .pontuacao{
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-template-rows: auto;
+                    margin-top: 5px;
+                    
+                    .infoFoguetes{
+                        grid-row: 2;
+                        display: flex;
+
+                        span{
+                            display: block;
+                            margin-right: 10px;
+                            color: $neutral600;
+                        }
+                    }
+
+                    .infoEtapas{
+                        grid-row: 1;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+
+            .btnFooter{
+                display: none;
+            }
+        }
+    }
+}

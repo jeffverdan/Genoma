@@ -1,0 +1,29 @@
+@import '../../styles/sass/colors.scss';
+
+.foguetes{
+    .icones{
+        width: 100%;
+        display: flex;
+
+        .icone{
+            width: 18px;
+            height: 18px;
+            
+            path{
+                fill: $neutral300;
+                color: $neutral300;
+            }
+        }
+
+        .active{
+            
+            path{
+                fill: $green500;
+                color: $green500;
+            }
+        }
+    }
+}
+
+/*Mpbile*/
+@media (max-width: 700px){}

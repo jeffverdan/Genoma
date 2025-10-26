@@ -1,0 +1,168 @@
+@import '../sass/colors.scss', '../sass/fonts.scss';
+
+@keyframes pulse {
+    0% {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.4);
+      opacity: 0.9;
+    }
+    100% {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+  }
+  
+  .badge-pulse {    
+    border: 1.5px solid #FFF;    
+    background: $secondary400;
+    transform-origin: center; /* evita movimento lateral */
+    animation: pulse 1.2s infinite ease-in-out;
+  }
+
+.header .desk-nav .badge-notif {
+    svg {
+        margin: 4px 1px;
+    }
+} 
+
+#notif-menu {
+    .MuiPaper-root {
+        border-radius: 10px 10px 10px 10px;
+        border: 1px solid var(--neutral-200, #E0E7EB);
+        background: var(--neutral-white, #FFF);
+    }
+
+    .notif-content {
+        width: 495px;
+        max-height: 593px;
+        overflow: auto;
+        overflow-x: hidden;
+
+        .tab-list {
+            padding: 0px 17px;
+
+            button {
+                text-transform: none;
+                font-family: Roboto;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 22px;
+            }
+        }
+
+        .messagens-container {
+            display: flex;
+            flex-direction: column;
+
+            .p2 {
+                color: $neutral600;
+                font-family: Roboto;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 22px;
+                padding-top: 17px;
+                padding-left: 15px;
+            }
+
+            .messagem-item {
+                display: flex;
+                gap: 10px;
+                padding: 17px;
+                border-left: 8px solid transparent;
+                align-items: center;
+
+                img {
+                    width: 110px;
+                    height: 90px;
+                    border-radius: 10px;
+                }
+
+                .messagem-info {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    width: 100%;
+
+
+                    p {
+                        font-family: Roboto;
+                        font-style: normal;
+                        font-weight: 400;
+                    }
+
+                    .address {
+                        color: $neutral500;
+                        font-size: 11px;
+                        line-height: 18px;
+                        /* 163.636% */
+                        text-transform: capitalize;
+                    }
+
+                    .title {
+                        color: $primary700;
+                        font-size: 14px;
+                        line-height: 20px;
+                        /* 142.857% */
+                    }
+
+                    .date {
+                        color: $neutral400;
+                        font-size: 10px;
+                        line-height: 18px;
+                        /* 180% */
+                        text-transform: uppercase;
+                    }
+                }
+
+                .dot-not-read {
+                    width: 13px;
+                    min-width: 13px;
+                    height: 13px;
+                    min-height: 13px;
+                    background-color: $secondary400;
+                    border-radius: 100%; 
+                    align-items: end;                    
+                }
+
+            }
+
+            .messagem-item.not-read {
+                p {
+                    font-weight: 700;
+                }
+            }
+            .messagem-item:hover {
+                cursor: pointer;
+                background-color: $neutral100;
+                border-left: 8px solid $primary500;
+                transform: scale(1.02);
+                transition: all 0.2s ease-in-out;
+
+            }
+        }
+    }
+}
+
+.h-4 {
+    height: 4px;
+}
+
+.btn-copy {
+    padding: 0;
+    margin-top: -5px;
+
+    .copy-icon {
+        width: 16px;
+        height: 16px;
+        fill: $primary500;
+    
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}

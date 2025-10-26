@@ -1,0 +1,39 @@
+@import '../../styles/sass/colors.scss', '../../styles/sass/fonts.scss';
+
+.container {
+    display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+    height: 36px;
+    //width: 100%;
+    // left: 0px;
+    // top: 0px;
+    // padding: 4px 13px 4px 13px;
+    // margin-right: 20px;
+    margin-bottom: 8px;
+    div {
+        padding-left: 15px;
+        width: max-content !important;
+    }
+}
+
+.check div {    
+    border-radius: 10px;
+    // padding-left: 15px;
+    span {
+        color: $primary500;
+    }
+    background-color: $primary100;
+
+    label{
+        span{
+            font-size: 1rem;
+        }
+        
+    }
+}
+
+/*Mobile*/
+@media (max-width: 700px) {
+
+}

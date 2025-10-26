@@ -1,0 +1,218 @@
+@import '../../styles/sass/colors.scss', '../../styles/sass/colors.scss';
+
+.card {
+    border-radius: 8px;
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.08)) drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.02)) !important;
+    box-shadow: none !important;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;    
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 9px;
+    padding-bottom: 9px !important;
+}
+
+.containerIcons {
+    display: flex;
+    justify-content: space-between;
+
+    .chips {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    
+        .btnOptions {
+            width: 100%;
+            text-align: flex-end;
+    
+            button {
+                padding: 2px 0px;
+                width: 38px;
+                height: 22px;
+                min-width: 18px;
+                z-index: 99;
+            }
+        }
+    }
+}
+
+
+.chip {
+    // width: 65px;
+    height: 18px;
+
+    // margin-bottom: 55.69px;
+    span {
+        text-align: center;
+        /* regular/s2 */
+        font-family: Roboto;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px; /* 150% */
+        text-transform: uppercase;
+    }
+}
+
+.concluido {
+    background-color: $green200;
+
+    span {
+        color: $green500;
+        text-align: center;
+        /* regular/s2 */
+        font-family: Roboto;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px; /* 150% */
+        text-transform: uppercase;
+    }
+}
+
+.fazendo {
+    background-color: $primary100;
+
+    span {
+        color: $primary500;
+        text-align: center;
+        /* regular/s2 */
+        font-family: Roboto;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px; /* 150% */
+        text-transform: uppercase;
+    }
+}
+
+.pendente {
+    background-color: $yellow100;
+
+    span {
+        color: $yellow600;
+        text-align: center;
+        /* regular/s2 */
+        font-family: Roboto;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px; /* 150% */
+        text-transform: uppercase;
+    }
+}
+
+.disable {
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.08)) drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.02)) !important;
+    box-shadow: none !important;
+    
+    svg {
+        fill: $neutral300
+    }
+
+    span,
+    h5,
+    div {
+        color: $neutral300
+    }
+
+    .chip {
+        background-color: transparent;
+    }
+}
+
+.content {
+    text-align: center;
+    // margin-bottom: 35px;    
+}
+
+.labelConcluido{
+    color: $green500;
+}
+
+.labelNeutral{
+    color: var(--neutral-600, #464F53);
+}
+
+.subtitle {
+    font-size: 12px;
+    font-weight: 400;
+    height: 14px;
+    margin-top: 5px;
+}
+
+.mobileIcon {
+    display: none;
+}
+
+.cards {
+    cursor: pointer;
+}
+
+.cards:hover>.card:hover {
+    transform: scale(1.15);
+    //box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+.cards:hover>.card:not(:hover) {
+    opacity: 0.5;
+    background-color: red;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+    // .chip {
+    //     // margin-bottom: 15px;
+    // }
+
+    .subtitle {
+        height: auto;
+        margin-top: 0;
+        display: flex;
+        width: 100%;
+    }
+
+    .mobileIcon {
+        margin: 0;
+        align-items: center;
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0;
+
+        .items {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            align-content: center;
+
+            h5 {
+                margin-left: 10px;
+                font-size: 1.25rem;
+            }
+
+            svg {
+                width: 1.12rem;
+                height: 1.12rem;
+                display: block;
+                display: flex;
+                justify-content: flex-end;
+                fill: $primary500;
+            }
+        }
+
+        .items:nth-child(2) {
+            margin-bottom: 10px;
+        }
+    }
+}
